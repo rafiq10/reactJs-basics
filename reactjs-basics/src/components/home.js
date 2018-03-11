@@ -8,7 +8,12 @@ export class Home extends React.Component {
         this.state = {
             age: props.initielaAge,
             status: 0
-        } 
+        };
+        setTimeout(() => {
+            this.setState({
+                status: 1
+            });
+        }, 3000);
     }
     onMakeOlder(){
         this.setState({
@@ -25,6 +30,8 @@ export class Home extends React.Component {
                 <button onClick={() => this.onMakeOlder()} className="btn-circle">
                     <a href="/">Make Me Older</a>
                 </button>
+                <hr/>
+                <button onClick={this.props.greet} className="btn btn-primary" >Greet</button>
             </div>
         );
     }
@@ -33,4 +40,5 @@ export class Home extends React.Component {
 Home.propTypes = {
     name: PropTypes.string,
     initielaAge: PropTypes.number,
+    greet: PropTypes.func,
 };

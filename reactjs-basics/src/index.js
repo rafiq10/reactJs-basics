@@ -6,17 +6,17 @@ import  { Home } from "./components/home";
 import {Container, Row, Col} from 'reactstrap';
 
 class App extends React.Component {
+    onGreet(){
+        alert("nice!");
+    }
+
     render () 
     {
-        var user = {
-            name: "Anna",
-            hobbies: ["Sports", "Reading"]
-        }
         return (
             <Container>
                 <Row>
                     <Col>
-                        <Header/>
+                        <Header homeLink="Home"/>
                     </Col>
                 </Row>
                 <br/>
@@ -24,7 +24,7 @@ class App extends React.Component {
                 <br/>
                 <Row>
                     <div className="col-xs-10 col-xs-offset-1">
-                        <Home name={"Rafal"} initielaAge={34} user = {user} />
+                        <Home name={"Rafal"} initielaAge={34} greet={this.onGreet}/>
                     </div>
                 </Row>
             </Container>
