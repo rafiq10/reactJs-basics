@@ -1,19 +1,13 @@
 import React from 'react';
 
+import { Navbar,NavbarBrand} from 'reactstrap'
+
 export class Header extends React.Component {
     render() {
         return(
-            <nav className="navbar navbar-default">
-                <div className="container">
-                    <div className="navbar-header">
-                        <ul className="nav navbar-nav">
-                            <li>
-                                <a href="#">Home</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+            <Navbar color="dark" className="navbar-dark navbar-expand-sm" expand fixed="top">
+                <NavbarBrand href="/">Home</NavbarBrand>
+            </Navbar>
         );
     }
 }
