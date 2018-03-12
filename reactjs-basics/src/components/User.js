@@ -4,7 +4,7 @@ import React from 'react';
          return(
             <div>
                 <h3>The user Page</h3>
-                <p>User ID:</p>
+                <p>User ID: {this.props.match.params.id}</p>
             </div>
          );
      }

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter, Route,Redirect} from 'react-router-dom';
+import {BrowserRouter, Route} from 'react-router-dom';
 
 import  { Home } from "./components/Home"; 
 import { Root } from './components/Root';
@@ -18,7 +18,7 @@ class App extends React.Component {
                     <div>
                         <Route path={"/"} exact component={Home} />
                         <Route path={"/home"} component={Home}/>
-                        <Route path={"/user"} component={User} />
+                        <Route path={"/user/:id"} component={User} />
                     </div>
                 </div>
             </BrowserRouter>
